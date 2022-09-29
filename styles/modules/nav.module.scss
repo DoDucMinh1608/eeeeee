@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 5px 50px;
+  background-color: rgb(16, 16, 16);
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-section {
+  display: flex;
+  gap: 30px;
+  margin: 10px;
+}
+
+.nav-section-sub {
+  font-size: .8rem;
+}
+
+.h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
