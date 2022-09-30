@@ -17,15 +17,15 @@ export function DropdownBox({ id, name, values }) {
   return (
     <section className={formStyles['input-field']}>
       <label htmlFor={id}>{name}</label>
-      <select name={name} id={id}>
+      <select {...{ id, name }}>
         {values?.map(i => <option key={i} value={i}>{i}</option>)}
       </select>
     </section >
   )
 }
 
-export function SubmitButton({ text, onclick }) {
-  return <button onClick={onclick} type='submit' className={formStyles['submit-btn']}>{text}</button>
+export function SubmitButton(props) {
+  return <input {...props} type='submit' className={formStyles['submit-btn']} />
 }
 
 export function Layout({ title, Form, navItems, link }) {
