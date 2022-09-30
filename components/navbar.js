@@ -4,7 +4,7 @@ import styles from '../styles/modules/nav.module.scss'
 export function NavItem({ link, title }) {
   return (
     <Link href={link}>
-      <a className={link}>{title}</a>
+      <a className={styles.link}>{title}</a>
     </Link>
   )
 }
@@ -21,7 +21,7 @@ export default function ({ name, items }) {
           </Link>
         </container>
         <container className={`${styles['nav-section']} ${styles['nav-section-sub']}`}>
-          {items?.map(({ item, link }) => <NavItem key={item} title={item} link={link} />)}
+          {items?.map(({ title, link }) => <NavItem key={title} title={title} link={link} />)}
         </container>
       </div>
     </nav>

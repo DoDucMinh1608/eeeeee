@@ -1,4 +1,4 @@
-import { FormInput, SubmitButton, AccountPageLayout } from '../../components/form.js'
+import { FormInput, SubmitButton, Layout } from '../../components/form.js'
 
 export function LoginForm() {
   return <>
@@ -7,6 +7,10 @@ export function LoginForm() {
     <SubmitButton text="Login" />
   </>
 }
+export const navItems = [
+  { link: './login', title: 'Login' },
+  { link: './register', title: 'Register' },
+]
 export default function () {
-  return <AccountPageLayout title="Login" Form={LoginForm} />
+  return <Layout title="Login" Form={LoginForm} navItems={navItems} link='./login' />
 }

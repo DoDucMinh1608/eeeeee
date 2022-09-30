@@ -3,11 +3,12 @@ import Head from 'next/head'
 import Navbar from './navbar'
 import mainStyles from '../styles/modules/main.module.scss'
 
-export function FormInput({ id, name, password, type, placeholder, value, required }) {
+export function FormInput(props) {
+  const { id, name } = props;
   return (
     <section className={formStyles['input-field']}>
       <label htmlFor={id}>{name}</label>
-      <input required={required} className={password && formStyles.pw} name={name} type={type || 'text'} id={id} placeholder={placeholder} value={value} />
+      <input {...props} />
     </section >
   )
 }
@@ -23,24 +24,24 @@ export function DropdownBox({ id, name, values }) {
   )
 }
 
-export function SubmitButton({ text }) {
-  return <button type='submit' className={formStyles['submit-btn']}>{text}</button>
+export function SubmitButton({ text, onclick }) {
+  return <button onClick={onclick} type='submit' className={formStyles['submit-btn']}>{text}</button>
 }
 
-export function AccountPageLayout({ title, Form }) {
+export function Layout({ title, Form, navItems, link }) {
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <Navbar name="Account" />
+      <Navbar name="Account" items={navItems} />
       <main className={mainStyles.main}>
         <section className={mainStyles['main-container']}>
           <div className={mainStyles['right-border']}>
             <h1 className={mainStyles.h1}>{title}</h1>
           </div>
           <div>
-            <form className={formStyles.form} method='POST' action='./login'>
+            <form className={formStyles.form} method='POST' action={link}>
               <Form />
             </form>
           </div>
