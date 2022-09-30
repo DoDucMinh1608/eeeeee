@@ -7,6 +7,12 @@
   color: white;
   min-height: 60px;
   padding: 0 50px;
+
+  >div {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
 }
 
 .link {
@@ -22,7 +28,11 @@
 }
 
 .nav-section-sub {
-  font-size: .8rem;
+  a {
+    font-size: 1rem !important;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
 }
 
 .h1 {

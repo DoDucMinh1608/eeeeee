@@ -8,6 +8,9 @@ export default function Home() {
         <title>Home</title>
       </Head>
       <Nav name="App" items={[
+        {
+          link: '/account', item: 'Account'
+        }
       ]} />
     </>
   )

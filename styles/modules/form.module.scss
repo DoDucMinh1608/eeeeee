@@ -1,10 +1,64 @@
 .form-section {
+  min-width: 300px;
+}
 
-  .h1 {
-    font-size: 3rem;
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-    font-weight: 900;
-    text-transform: uppercase;
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.input-field {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+
+  label {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 800;
   }
+
+  input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding: 5px 10px;
+    width: 400px;
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  select {
+    background-color: rgba(0, 0, 0, 0);
+    width: 400px;
+    border: none;
+    color: gray;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding-left: 10px;
+  }
+
+  ::-ms-reveal,
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
+  ::-webkit-datetime-edit-text {
+    color: rgb(255, 255, 255);
+  }
+
+  ::-webkit-datetime-edit {
+    color: gray;
+  }
+
+  ::-webkit-datetime-edit-text {
+    padding: 2px;
+    color: gray;
+  }
+}
+
+.pw {
+  -webkit-text-security: disc;
 }
