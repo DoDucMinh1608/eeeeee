@@ -13,16 +13,18 @@ export function NavItem(props) {
 export default function (props) {
   return (
     <nav className={styles.navbar}>
-      <container className={styles['nav-section']}>
-        <Link href="/">
-          <a className={styles.link}>
-            <h1 className={styles.h1}>{props.name}</h1>
-          </a>
-        </Link>
-      </container>
-      {props.items && <container className={[styles['nav-section'], styles['nav-section-sub']].join(' ')}>
-        {props.items?.map(({ item, link }) => <NavItem key={item} title={item} link={link} className={styles.link} />)}
-      </container>}
+      <div>
+        <container className={styles['nav-section']}>
+          <Link href="/">
+            <a className={styles.link}>
+              <h1 className={styles.h1}>{props.name}</h1>
+            </a>
+          </Link>
+        </container>
+        {props.items && <container className={[styles['nav-section'], styles['nav-section-sub']].join(' ')}>
+          {props.items?.map(({ item, link }) => <NavItem key={item} title={item} link={link} className={styles.link} />)}
+        </container>}
+      </div>
     </nav>
   )
 }
